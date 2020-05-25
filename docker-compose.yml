@@ -1,0 +1,16 @@
+version: '2'
+services:
+  proxy:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+  web:
+    image: XXX/XXX:X.X
+    working_dir: /var/www/html
+# PLEASE NOTICE THAT I AM NOT PUBLISHING THE PORTS NOW SINCE IT IS NOT NEEDED    
+#    ports:
+#      - 8080:8080
+
+# HERE FOLLOWS THE REST OF YOUR DOCKER COMPOSE CONFIGURATION FILE
